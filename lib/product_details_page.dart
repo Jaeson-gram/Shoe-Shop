@@ -92,10 +92,17 @@ class _ProductDetailsPageState extends State<ProductDetailsPage> {
                     style: ElevatedButton.styleFrom(
                         backgroundColor: Theme.of(context).colorScheme.primary,
                         minimumSize: const Size(double.infinity, 50)),
-                    child: const Text(
-                      'Add to cart',
-                      style: TextStyle(color: Colors.black, fontSize: 20),
-                    ),
+                    child: const Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.shopping_cart_rounded,
+                              color: Colors.black),
+                          SizedBox(width: 8),
+                          Text(
+                            'Add to cart',
+                            style: TextStyle(color: Colors.black, fontSize: 20),
+                          ),
+                        ]),
                   ),
                 )
               ],
