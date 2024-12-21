@@ -30,8 +30,15 @@ class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: pages[currentPageIndex],
+      body: IndexedStack(
+        index: currentPageIndex,
+        children: pages,
+      ),
       bottomNavigationBar: BottomNavigationBar(
+          iconSize: 30,
+          // to make the bar come down..
+          // selectedFontSize: 0,
+          // unselectedFontSize: 0,
           onTap: (value) {
             setState(() {
               currentPageIndex = value;
